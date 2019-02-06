@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>easy-tk-mybatis-example</module>
+        <module>easy-spring-cloud-examples</module>
     </modules>
 
     <parent>

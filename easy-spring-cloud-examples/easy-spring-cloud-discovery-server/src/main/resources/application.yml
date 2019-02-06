@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: easy-discovery-server
+  config:
+    location: classpath:/config/
