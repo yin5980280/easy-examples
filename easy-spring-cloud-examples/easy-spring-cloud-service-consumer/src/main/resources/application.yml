@@ -27,3 +27,6 @@ easy:
       return:
         value:
           enable: true
+      value:
+        path:
+          not-start-with: /actuator
