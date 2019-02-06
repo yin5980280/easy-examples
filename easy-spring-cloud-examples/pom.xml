@@ -15,6 +15,7 @@
         <module>easy-spring-cloud-discovery-server</module>
         <module>easy-spring-cloud-service-producer</module>
         <module>easy-spring-cloud-service-consumer</module>
+        <module>easy-spring-cloud-monitor-admin</module>
     </modules>
 
 

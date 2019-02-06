@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: monitor-admin
+
+server:
+  port: 8000
+
+eureka:
+  client:
+#    server:
+#      waitTimeInMsWhenSyncEmpty: 0
+    service-url:
+      defaultZone: http://127.0.0.1:8671/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
