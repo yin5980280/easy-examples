@@ -13,6 +13,6 @@ import org.springframework.context.annotation.Configuration;
  * @link : com.keruyun.checkout.configuration.FeignConfiguration
  */
 @Configuration
-@EnableFeignClients("com.vartime.easy.spring.cloud.producer.client.api")
+@EnableFeignClients("com.vartime.easy.spring.cloud.producer.client")
 public class FeignConfiguration {
 }

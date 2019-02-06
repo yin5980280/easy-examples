@@ -1,0 +1,29 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: feign-consumer
+producer:
+  server:
+    name: FEIGN-PRODUCER
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8671/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+easy:
+  global:
+    json:
+      return:
+        value:
+          enable: true
