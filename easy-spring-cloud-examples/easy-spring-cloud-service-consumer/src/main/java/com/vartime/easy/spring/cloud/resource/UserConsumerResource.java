@@ -1,4 +1,6 @@
 package com.vartime.easy.spring.cloud.resource;
+import com.vartime.easy.spring.boot.model.BaseQuery;
+import com.vartime.easy.spring.boot.model.PageInfo;
 import com.vartime.easy.spring.cloud.producer.client.UserResourceClient;
 import com.vartime.easy.spring.cloud.producer.model.UserVO;
 
@@ -34,5 +36,10 @@ public class UserConsumerResource {
         long endTime = System.currentTimeMillis();
         log.info("调用结束时间{}ms, 一共花费{}ms", endTime, endTime - startTime);
         return user;
+    }
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public PageInfo<UserVO> users(BaseQuery query) {
+        return userResourceClient.list(query);
     }
 }
