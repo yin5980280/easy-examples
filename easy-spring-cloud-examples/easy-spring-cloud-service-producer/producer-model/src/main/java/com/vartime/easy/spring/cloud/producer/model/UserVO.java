@@ -2,6 +2,7 @@ package com.vartime.easy.spring.cloud.producer.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.vartime.easy.commons.base.BaseObject;
 import com.vartime.easy.commons.json.JsonDateSerialize;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -38,7 +39,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserVO {
+public class UserVO extends BaseObject {
     /**
      * 实体Id
      */
