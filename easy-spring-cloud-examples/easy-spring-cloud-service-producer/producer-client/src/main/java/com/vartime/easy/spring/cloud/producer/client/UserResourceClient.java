@@ -14,6 +14,6 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @date : 2018/6/15 下午6:00
  * @link : com.keruyun.checkout.client.UserResourceClient
  */
-@FeignClient("${producer.server.name}")
+@FeignClient(value = "${producer.server.name}", path = "api")
 public interface UserResourceClient extends UserResourceInterface {
 }
