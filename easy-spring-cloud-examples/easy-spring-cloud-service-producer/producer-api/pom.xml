@@ -14,10 +14,6 @@
     <dependencies>
         <dependency>
             <groupId>com.vartime.easy</groupId>
-            <artifactId>easy-spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vartime.easy</groupId>
             <artifactId>producer-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

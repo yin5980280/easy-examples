@@ -1,11 +1,13 @@
 package com.vartime.easy.spring.cloud.example.api;
 
-import com.vartime.easy.spring.cloud.producer.model.User;
+import com.vartime.easy.commons.base.model.PageInfo;
+import com.vartime.easy.spring.cloud.producer.model.UserVO;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author : yinlin
@@ -21,6 +23,10 @@ public interface UserResourceInterface {
     @RequestMapping(value = "user/{id}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    User get(@PathVariable("id") Long id);
+    UserVO get(@PathVariable("id") Long id);
 
+    @RequestMapping(value = "users",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    PageInfo<UserVO> list(@RequestParam Integer pageNum, @RequestParam Integer pageSize);
 }

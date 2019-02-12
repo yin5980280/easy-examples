@@ -1,6 +1,6 @@
 package com.vartime.easy.spring.cloud.resource;
 import com.vartime.easy.spring.cloud.producer.client.UserResourceClient;
-import com.vartime.easy.spring.cloud.producer.model.User;
+import com.vartime.easy.spring.cloud.producer.model.UserVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,10 +27,10 @@ public class UserConsumerResource {
     private UserResourceClient userResourceClient;
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
-    public User get(@PathVariable("id") Long id) {
+    public UserVO get(@PathVariable("id") Long id) {
         long startTime = System.currentTimeMillis();
         log.info("调用开始时间{}ms", startTime);
-        User user = userResourceClient.get(id);
+        UserVO user = userResourceClient.get(id);
         long endTime = System.currentTimeMillis();
         log.info("调用结束时间{}ms, 一共花费{}ms", endTime, endTime - startTime);
         return user;

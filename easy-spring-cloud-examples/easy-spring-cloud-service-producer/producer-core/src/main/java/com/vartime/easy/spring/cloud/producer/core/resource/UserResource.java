@@ -1,9 +1,17 @@
 package com.vartime.easy.spring.cloud.producer.core.resource;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.vartime.easy.commons.base.bean.BeanConverter;
+import com.vartime.easy.commons.base.model.PageInfo;
 import com.vartime.easy.spring.cloud.example.api.UserResourceInterface;
-import com.vartime.easy.spring.cloud.producer.model.User;
+import com.vartime.easy.spring.cloud.producer.core.entity.User;
+import com.vartime.easy.spring.cloud.producer.core.service.UserService;
+import com.vartime.easy.spring.cloud.producer.model.UserVO;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
@@ -22,14 +30,27 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @Slf4j
 public class UserResource implements UserResourceInterface {
+
+    @Autowired
+    private UserService userService;
+
     @Override
-    public User get(@PathVariable("id") Long id) {
+    public UserVO get(@PathVariable("id") Long id) {
         log.info("id:{}", id);
         try {
             Thread.sleep(new Random().nextInt(3000) + 100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return new User(id, "PANDA");
+        return userService.selectByPk(id).convert(UserVO.class);
+    }
+
+    @Override
+    public PageInfo<UserVO> list(@RequestParam Integer pageNum, @RequestParam Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        Page<User> users = (Page<User>) userService.selectAll();
+        PageInfo<UserVO> info = PageInfo.valueOf(users);
+        info.setList(BeanConverter.convert(UserVO.class, users));
+        return info;
     }
 }
