@@ -1,8 +1,11 @@
 package com.vartime.easy.examples.resource;
 
 import com.vartime.easy.examples.entity.User;
+import com.vartime.easy.examples.service.impl.Publisher;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -17,6 +20,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class TestController {
+
+    @Autowired
+    private Publisher publisher;
+
     @RequestMapping("index.html")
     public String index() {
         return "index";
@@ -26,5 +33,12 @@ public class TestController {
     @ResponseBody
     public User user() {
         return null;
+    }
+
+    @RequestMapping("test/publish/{msg}")
+    @ResponseBody
+    public String publish(@PathVariable("msg") String msg) {
+        publisher.publish(msg);
+        return "发布成功：" + msg;
     }
 }
