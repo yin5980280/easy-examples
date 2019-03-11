@@ -52,7 +52,7 @@ public class RedisQueue implements InitializingBean, DisposableBean {
     }
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         if (!start && listenerThread == null) {
             listenerThread = new ListenerThread();
             listenerThread.setDaemon(true);
@@ -65,20 +65,21 @@ public class RedisQueue implements InitializingBean, DisposableBean {
 
         @Override
         public void run() {
-            try {
-                while(true) {
+            while (true) {
+                try {
                     String value = template.opsForList().rightPop(eventTopic);
                     //逐个执行
                     if (value != null) {
-                        try{
+                        try {
                             listener.listener(value);
-                        }catch(Exception e){
+                        } catch(Exception e) {
                             //
                         }
                     }
+                    Thread.sleep(1);
+                } catch(Exception e) {
+                    //
                 }
-            } catch(Exception e) {
-                //
             }
         }
     }
