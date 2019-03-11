@@ -1,6 +1,7 @@
 package com.vartime.easy.examples.resource;
 
 import com.vartime.easy.examples.entity.User;
+import com.vartime.easy.examples.service.CoinService;
 import com.vartime.easy.examples.service.impl.Publisher;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class TestController {
     @Autowired
     private Publisher publisher;
 
+    @Autowired
+    private CoinService coinService;
+
     @RequestMapping("index.html")
     public String index() {
         return "index";
@@ -41,4 +45,12 @@ public class TestController {
         publisher.publish(msg);
         return "发布成功：" + msg;
     }
+
+    @RequestMapping("test/coin")
+    @ResponseBody
+    public Boolean coin() {
+        coinService.processor();
+        return true;
+    }
+
 }

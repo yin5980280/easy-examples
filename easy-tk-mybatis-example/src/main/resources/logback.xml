@@ -1,110 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
 
-	<property name="log.path" value="logs" />
-	<property name="log.pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger - [%method,%line] - %msg%n" />
+<configuration scan="true" debug="false">
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <property name="LOG_PATH" value="./logs/"/>
+    <property name="LOG_FILE" value="info.log"/>
+    <property name="LOG_ERROR_FILE" value="error.log"/>
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %X{IP} %level %thread@%X{_PAYMENT_GLOBAL_MSG_ID} %X{URL} %logger[%method:%line] - %msg%n"/>
 
-	<!-- 控制台输出 -->
-	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<pattern>${log.pattern}</pattern>
-		</encoder>
-	</appender>
 
-	<!-- 系统日志输出 -->
-	<appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
-	    <file>${log.path}/sys-info.log</file>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<!-- 按天回滚 daily -->
-			<fileNamePattern>${log.path}/sys-info.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<!-- 日志最大的历史 60天 -->
-			<maxHistory>60</maxHistory>
-		</rollingPolicy>
-		<encoder>
-			<pattern>${log.pattern}</pattern>
-		</encoder>
-		<filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-	</appender>
-
-	<appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-	    <file>${log.path}/sys-error.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.path}/sys-error.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<!-- 日志最大的历史 60天 -->
-			<maxHistory>60</maxHistory>
-        </rollingPolicy>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--<withJansi>true</withJansi>-->
         <encoder>
-            <pattern>${log.pattern}</pattern>
-        </encoder>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-    </appender>
-
-	<!-- 用户访问日志输出  -->
-    <appender name="sys-user" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${log.path}/sys-user.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 按天回滚 daily -->
-            <fileNamePattern>${log.path}/sys-user.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <!-- 日志最大的历史 60天 -->
-            <maxHistory>60</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>${log.pattern}</pattern>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
         </encoder>
     </appender>
-
-    <appender name="sys-debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.path}/sys-debug.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 按天回滚 daily -->
-            <fileNamePattern>${log.path}/sys-debug.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <!-- 日志最大的历史 60天 -->
-            <maxHistory>60</maxHistory>
-        </rollingPolicy>
+    <appender name="LogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH}/${LOG_FILE}</File>
+        <Append>true</Append>
         <encoder>
-            <pattern>${log.pattern}</pattern>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
         </encoder>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>DEBUG</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
         </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/${LOG_FILE}.%d{yyyyMMdd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH}/${LOG_ERROR_FILE}</File>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/${LOG_ERROR_FILE}.%d{yyyyMMdd}</fileNamePattern>
+        </rollingPolicy>
     </appender>
 
-	<!-- 显示形成的sql、使用的参数、结果集 -->
-	<!--
-		<logger name="java.sql" level="debug" />
-		<logger name="org.springframework.jdbc" level="debug" />
-	-->
-
-	<logger name="com.vartime" level="debug" />
-    <logger name="com.vartime.easy.examples.mapper" level="debug"/>
-
-	<root level="debug">
-		<appender-ref ref="console" />
-	</root>
-
-	<!--系统操作日志-->
+    <logger name="com.netflix" level="INFO"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl" level="WARN"/>
+    <logger name="com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver" level="WARN"/>
+    <logger name="org.apache.activemq.transport.failover.FailoverTransport" level="WARN"/>
+    <logger name="org.apache" level="INFO"/>
     <root level="INFO">
-        <appender-ref ref="file_info" />
-        <appender-ref ref="file_error" />
-        <appender-ref ref="sys-debug"/>
+        <appender-ref ref="Console"/>
+        <appender-ref ref="LogFile"/>
+        <appender-ref ref="ErrorFile"/>
     </root>
-
-	<!--系统用户操作日志-->
-    <logger name="sys-user" level="info">
-        <appender-ref ref="sys-user"/>
-    </logger>
-
-    <logger name="sys-debug" level="debug">
-        <appender-ref ref="sys-debug"/>
-    </logger>
 </configuration>
+
