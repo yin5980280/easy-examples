@@ -1,5 +1,6 @@
 package com.vartime.easy.examples.resource;
 
+import com.vartime.easy.commons.utils.Encodes;
 import com.vartime.easy.examples.entity.User;
 import com.vartime.easy.examples.service.CoinService;
 import com.vartime.easy.examples.service.impl.Publisher;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -35,7 +37,10 @@ public class TestController {
 
     @RequestMapping("index/user")
     @ResponseBody
-    public User user() {
+    public User user(@RequestParam("content") String content) {
+        System.out.println(Encodes.decodeBase64String(content));
+        System.out.println(content.replaceAll(" ", "+"));
+        System.out.println(Encodes.decodeBase64String(content.replaceAll(" ", "+")));
         return null;
     }
 
