@@ -11,6 +11,7 @@
     <modules>
         <module>easy-tk-mybatis-example</module>
         <module>easy-spring-cloud-examples</module>
+        <module>easy-spring-boot-redisson-example</module>
     </modules>
 
     <parent>
