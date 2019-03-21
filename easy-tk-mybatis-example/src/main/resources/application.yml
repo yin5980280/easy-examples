@@ -13,7 +13,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/mycloud?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=true&useAffectedRows=true&serverTimezone=Asia/Shanghai
       username: root
-      password: xxxxx
+      password: qihao520
       validation-query: select 1
       type: com.mysql.cj.jdbc.MysqlDataSource
   freemarker:
