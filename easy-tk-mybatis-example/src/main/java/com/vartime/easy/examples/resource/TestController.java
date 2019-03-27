@@ -1,6 +1,5 @@
 package com.vartime.easy.examples.resource;
 
-import com.vartime.easy.commons.utils.Encodes;
 import com.vartime.easy.examples.entity.User;
 import com.vartime.easy.examples.service.CoinService;
 import com.vartime.easy.examples.service.impl.Publisher;
@@ -11,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.org.easysite.commons.utils.Encodes;
 
 /**
  * @author : yinlin

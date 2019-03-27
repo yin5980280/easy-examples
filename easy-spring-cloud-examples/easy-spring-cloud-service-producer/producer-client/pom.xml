@@ -22,7 +22,7 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.easy.site</groupId>
+            <groupId>cn.org.easysite</groupId>
             <artifactId>easy-spring-cloud-starter-feign</artifactId>
         </dependency>
     </dependencies>

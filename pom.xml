@@ -16,7 +16,7 @@
     </modules>
 
     <parent>
-        <groupId>com.easy.site</groupId>
+        <groupId>cn.org.easysite</groupId>
         <artifactId>easy-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
