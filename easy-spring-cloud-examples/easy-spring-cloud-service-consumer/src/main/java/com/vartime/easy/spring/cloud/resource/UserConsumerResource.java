@@ -1,6 +1,5 @@
 package com.vartime.easy.spring.cloud.resource;
-import com.vartime.easy.spring.boot.model.BaseQuery;
-import com.vartime.easy.spring.boot.model.PageInfo;
+
 import com.vartime.easy.spring.cloud.producer.client.UserResourceClient;
 import com.vartime.easy.spring.cloud.producer.model.UserVO;
 
@@ -10,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import cn.org.easysite.spring.boot.model.BaseQuery;
+import cn.org.easysite.spring.boot.model.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 
 /**
