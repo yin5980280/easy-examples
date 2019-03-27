@@ -1,7 +1,6 @@
 package com.vartime.easy.websocket.message;
 
-import com.vartime.easy.commons.base.BaseObject;
-
+import cn.org.easysite.commons.base.BaseObject;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

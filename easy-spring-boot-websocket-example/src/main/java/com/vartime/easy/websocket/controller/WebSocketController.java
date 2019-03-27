@@ -1,6 +1,5 @@
 package com.vartime.easy.websocket.controller;
 
-import com.vartime.easy.commons.utils.DateUtils;
 import com.vartime.easy.websocket.message.SocketMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,8 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.org.easysite.commons.utils.DateUtils;
 
 /**
  * @author : yinlin
