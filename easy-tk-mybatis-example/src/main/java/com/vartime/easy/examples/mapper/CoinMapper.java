@@ -1,9 +1,10 @@
 package com.vartime.easy.examples.mapper;
 
 import com.vartime.easy.examples.entity.Coin;
-import com.vartime.easy.spring.boot.tk.mybatis.core.mapper.CommonMapper;
 
 import org.apache.ibatis.annotations.Mapper;
+
+import cn.org.easysite.spring.boot.tk.mybatis.core.mapper.CommonMapper;
 
 /**
  * @author : yinlin
