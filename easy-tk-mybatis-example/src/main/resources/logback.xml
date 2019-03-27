@@ -5,7 +5,7 @@
     <property name="LOG_PATH" value="./logs/"/>
     <property name="LOG_FILE" value="info.log"/>
     <property name="LOG_ERROR_FILE" value="error.log"/>
-    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %X{IP} %level %thread@%X{_PAYMENT_GLOBAL_MSG_ID} %X{URL} %logger[%method:%line] - %msg%n"/>
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %X{IP} %level %thread@%X{_EASY_GLOBAL_MSG_ID} %X{URL} %logger[%method:%line] - %msg%n"/>
 
 
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
@@ -25,8 +25,9 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>DEBUG</level>
         </filter>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/${LOG_FILE}.%d{yyyyMMdd}</fileNamePattern>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/info.%d{yyyyMMdd}.%i.log</fileNamePattern>
+            <maxFileSize>20MB</maxFileSize>
         </rollingPolicy>
     </appender>
     <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -38,8 +39,9 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
         </filter>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/${LOG_ERROR_FILE}.%d{yyyyMMdd}</fileNamePattern>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/error.%d{yyyyMMdd}.%i.log</fileNamePattern>
+            <maxFileSize>20MB</maxFileSize>
         </rollingPolicy>
     </appender>
 
@@ -49,6 +51,7 @@
     <logger name="com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver" level="WARN"/>
     <logger name="org.apache.activemq.transport.failover.FailoverTransport" level="WARN"/>
     <logger name="org.apache" level="INFO"/>
+    <logger name="com.vartime.easy.examples.mapper"/>
     <root level="INFO">
         <appender-ref ref="Console"/>
         <appender-ref ref="LogFile"/>
