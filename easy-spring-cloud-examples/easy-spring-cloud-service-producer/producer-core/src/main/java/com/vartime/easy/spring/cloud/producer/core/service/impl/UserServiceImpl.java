@@ -1,13 +1,13 @@
 package com.vartime.easy.spring.cloud.producer.core.service.impl;
 
-
-import com.vartime.easy.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 import com.vartime.easy.spring.cloud.producer.core.entity.User;
 import com.vartime.easy.spring.cloud.producer.core.mapper.UserMapper;
 import com.vartime.easy.spring.cloud.producer.core.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 
 /**
  * @author : yinlin
