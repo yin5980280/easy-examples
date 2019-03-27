@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.vartime.easy</groupId>
+            <groupId>com.easy.site</groupId>
             <artifactId>easy-spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>

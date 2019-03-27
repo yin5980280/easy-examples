@@ -16,7 +16,7 @@
     </modules>
 
     <parent>
-        <groupId>com.vartime.easy</groupId>
+        <groupId>com.easy.site</groupId>
         <artifactId>easy-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
