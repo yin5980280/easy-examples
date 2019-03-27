@@ -1,6 +1,6 @@
 package com.vartime.easy.examples.entity;
 
-import com.vartime.easy.spring.boot.tk.mybatis.core.entity.BaseLogicEntity;
+import com.easy.site.spring.boot.tk.mybatis.core.entity.BaseLogicEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

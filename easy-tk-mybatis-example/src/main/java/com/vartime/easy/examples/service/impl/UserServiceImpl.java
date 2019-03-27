@@ -1,9 +1,9 @@
 package com.vartime.easy.examples.service.impl;
 
+import com.easy.site.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 import com.vartime.easy.examples.entity.User;
 import com.vartime.easy.examples.mapper.UserMapper;
 import com.vartime.easy.examples.service.UserService;
-import com.vartime.easy.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

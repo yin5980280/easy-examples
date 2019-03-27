@@ -1,7 +1,7 @@
 package com.vartime.easy.examples.service;
 
+import com.easy.site.spring.boot.tk.mybatis.core.service.BaseLogicService;
 import com.vartime.easy.examples.entity.User;
-import com.vartime.easy.spring.boot.tk.mybatis.core.service.BaseLogicService;
 
 /**
  * @author : yinlin

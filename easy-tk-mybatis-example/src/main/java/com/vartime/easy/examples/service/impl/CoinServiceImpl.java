@@ -1,8 +1,8 @@
 package com.vartime.easy.examples.service.impl;
 
+import com.easy.site.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 import com.vartime.easy.examples.entity.Coin;
 import com.vartime.easy.examples.service.CoinService;
-import com.vartime.easy.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
