@@ -1,8 +1,8 @@
 package com.vartime.easy.spring.cloud.producer.core.service;
 
-
-import com.vartime.easy.spring.boot.tk.mybatis.core.service.BaseLogicService;
 import com.vartime.easy.spring.cloud.producer.core.entity.User;
+
+import cn.org.easysite.spring.boot.tk.mybatis.core.service.BaseLogicService;
 
 /**
  * @author : yinlin

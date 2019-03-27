@@ -1,9 +1,10 @@
 package com.vartime.easy.spring.cloud.producer.core.mapper;
 
-import com.vartime.easy.spring.boot.tk.mybatis.core.mapper.CommonMapper;
 import com.vartime.easy.spring.cloud.producer.core.entity.User;
 
 import org.apache.ibatis.annotations.Mapper;
+
+import cn.org.easysite.spring.boot.tk.mybatis.core.mapper.CommonMapper;
 
 /**
  * @author : yinlin

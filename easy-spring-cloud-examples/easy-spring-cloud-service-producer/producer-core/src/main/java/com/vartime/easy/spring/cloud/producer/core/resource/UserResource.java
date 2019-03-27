@@ -1,9 +1,6 @@
 package com.vartime.easy.spring.cloud.producer.core.resource;
 
 import com.github.pagehelper.Page;
-import com.vartime.easy.commons.base.bean.BeanConverter;
-import com.vartime.easy.spring.boot.model.BaseQuery;
-import com.vartime.easy.spring.boot.model.PageInfo;
 import com.vartime.easy.spring.cloud.example.api.UserResourceInterface;
 import com.vartime.easy.spring.cloud.producer.core.entity.User;
 import com.vartime.easy.spring.cloud.producer.core.service.UserService;
@@ -16,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
 
+import cn.org.easysite.commons.base.bean.BeanConverter;
+import cn.org.easysite.spring.boot.model.BaseQuery;
+import cn.org.easysite.spring.boot.model.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 
 /**

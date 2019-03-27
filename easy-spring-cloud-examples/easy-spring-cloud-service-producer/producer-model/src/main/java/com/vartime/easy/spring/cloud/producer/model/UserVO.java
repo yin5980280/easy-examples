@@ -2,8 +2,6 @@ package com.vartime.easy.spring.cloud.producer.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.vartime.easy.commons.base.BaseObject;
-import com.vartime.easy.commons.json.JsonDateSerialize;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -20,6 +18,8 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import cn.org.easysite.commons.base.BaseObject;
+import cn.org.easysite.commons.json.JsonDateSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;

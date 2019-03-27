@@ -1,7 +1,5 @@
 package com.vartime.easy.spring.cloud.example.api;
 
-import com.vartime.easy.spring.boot.model.BaseQuery;
-import com.vartime.easy.spring.boot.model.PageInfo;
 import com.vartime.easy.spring.cloud.producer.model.UserVO;
 
 import org.springframework.http.MediaType;
@@ -9,6 +7,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import cn.org.easysite.spring.boot.model.BaseQuery;
+import cn.org.easysite.spring.boot.model.PageInfo;
 
 /**
  * @author : yinlin
