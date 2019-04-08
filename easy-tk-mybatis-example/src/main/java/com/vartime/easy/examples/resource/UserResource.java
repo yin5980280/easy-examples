@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import cn.org.easysite.commons.base.Response;
 import cn.org.easysite.framework.exception.BaseException;
+import cn.org.easysite.spring.boot.model.Response;
 import cn.org.easysite.spring.boot.validator.annotation.Validate;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
