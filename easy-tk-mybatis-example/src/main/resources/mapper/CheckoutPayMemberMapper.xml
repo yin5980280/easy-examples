@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vartime.easy.examples.mapper.CheckoutPayMemberMapper">
+
+    <resultMap type="com.vartime.easy.examples.entity.CheckoutPayMember" id="BaseResultMap">
+        <result property="id" column="id" jdbcType="LONG INTEGER"/>
+        <result property="account" column="account" jdbcType="VARCHAR"/>
+        <result property="registrationFrom" column="registration_from" jdbcType="VARCHAR"/>
+        <result property="statusFlag" column="status_flag" jdbcType="INTEGER"/>
+        <result property="serverCreateTime" column="server_create_time" jdbcType="TIMESTAMP"/>
+        <result property="serverUpdateTime" column="server_update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    
+    <sql id="BaseColumns">
+         id, account, registration_from, status_flag, server_create_time, server_update_time
+    </sql>
+
+</mapper>

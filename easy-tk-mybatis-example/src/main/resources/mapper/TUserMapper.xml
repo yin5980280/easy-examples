@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vartime.easy.examples.test.mapper.TUserMapper">
+
+    <resultMap type="com.vartime.easy.examples.test.entity.TUser" id="BaseResultMap">
+        <result property="id" column="id" jdbcType="LONG INTEGER"/>
+        <result property="operating" column="operating" jdbcType="VARCHAR"/>
+        <result property="serverCreateTime" column="server_create_time" jdbcType="TIMESTAMP"/>
+        <result property="serverUpdateTime" column="server_update_time" jdbcType="TIMESTAMP"/>
+        <result property="userAge" column="user_age" jdbcType="LONG INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="usable" column="usable" jdbcType="INTEGER"/>
+    </resultMap>
+    
+    <sql id="BaseColumns">
+         id, operating, server_create_time, server_update_time, user_age, user_name, usable
+    </sql>
+
+</mapper>

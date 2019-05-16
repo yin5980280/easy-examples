@@ -1,0 +1,40 @@
+application:
+    version: 1.0
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
+  security:
+    user:
+      name: keyo
+      password: 123456
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/mycloud?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=true&useAffectedRows=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: qihao520
+      validation-query: select 1
+      type: com.mysql.cj.jdbc.MysqlDataSource
+  freemarker:
+      enabled: true
+      check-template-location: true
+      suffix: .html
+  jpa:
+    show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+easy:
+  global:
+    json:
+      return:
+        value:
+          enable: true
+server:
+  port: 8080
