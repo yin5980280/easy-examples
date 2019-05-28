@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import cn.org.easysite.commons.base.BaseObject;
@@ -28,6 +29,7 @@ public class CheckoutPayMember extends BaseObject {
      * 支付用户ID
      **/
     @Column(name = "id")
+    @Id
     private Long id;
     /**
      * 支付用户账号
