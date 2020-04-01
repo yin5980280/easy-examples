@@ -16,9 +16,9 @@ import cn.org.easysite.spring.boot.model.PageInfo;
  * @version : 1.0
  * Description :
  * Copyright : Copyright (c) 2018
- * Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @date : 2018/6/15 下午5:55
- * @link : com.keruyun.checkout.api.UserResourceInterface
+ * @link : com.熊猫科技.checkout.api.UserResourceInterface
  */
 public interface UserResourceInterface {
 

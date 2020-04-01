@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
  * @date : 2018/11/14 10:11 AM
  * @Description :
  * @Copyright : Copyright (c) 2018
- * @Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vpay.exchange.core.eventbus.impl.RedisPublisher
  */
 public class RedisPublisher implements Publisher {

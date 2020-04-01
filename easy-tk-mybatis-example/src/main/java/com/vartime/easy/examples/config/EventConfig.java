@@ -18,7 +18,7 @@ import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
  * @date : 2019-02-18 17:31
  * @Description :
  * @Copyright : Copyright (c) 2018
- * @Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vartime.easy.examples.config.EventConfig
  */
 @Configuration

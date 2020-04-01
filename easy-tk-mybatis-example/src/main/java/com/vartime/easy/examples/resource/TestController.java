@@ -19,7 +19,7 @@ import cn.org.easysite.commons.utils.Encodes;
  * @date : 2019-01-30 18:31
  * @Description :
  * @Copyright : Copyright (c) 2018
- * @Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vartime.easy.examples.resource.TestController
  */
 @Controller

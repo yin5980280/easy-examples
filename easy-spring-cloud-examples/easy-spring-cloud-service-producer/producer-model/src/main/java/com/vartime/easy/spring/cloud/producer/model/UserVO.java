@@ -31,7 +31,7 @@ import lombok.NoArgsConstructor;
  * @date : 2018/9/26 下午5:39
  * @Description :
  * @Copyright : Copyright (c) 2018
- * @Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.mycloud.sample.entity.User
  */
 @Entity

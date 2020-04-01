@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @date : 2019-02-18 18:04
  * @Description :
  * @Copyright : Copyright (c) 2018
- * @Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vartime.easy.examples.service.impl.RedisQueue
  */
 @Component

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * @date : 2019-01-29 10:54
  * @Description :
  * @Copyright : Copyright (c) 2018
- * @Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vartime.easy.examples.service.impl.UserServiceImpl
  */
 @Service

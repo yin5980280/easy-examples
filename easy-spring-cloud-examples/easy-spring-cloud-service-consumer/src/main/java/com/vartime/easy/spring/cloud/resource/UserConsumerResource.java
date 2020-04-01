@@ -18,9 +18,9 @@ import lombok.extern.slf4j.Slf4j;
  * @version : 1.0
  * Description :
  * Copyright : Copyright (c) 2018
- * Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @date : 2018/6/15 下午6:08
- * @link : com.keruyun.checkout.resource.UserConsumerResource
+ * @link : com.熊猫科技.checkout.resource.UserConsumerResource
  */
 @RestController
 @Slf4j

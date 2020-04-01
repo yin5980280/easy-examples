@@ -10,9 +10,9 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @version : 1.0
  * Description :
  * Copyright : Copyright (c) 2018
- * Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @date : 2018/6/15 下午6:00
- * @link : com.keruyun.checkout.client.UserResourceClient
+ * @link : com.熊猫科技.checkout.client.UserResourceClient
  */
 @FeignClient(value = "${producer.server.name}", path = "api")
 public interface UserResourceClient extends UserResourceInterface {

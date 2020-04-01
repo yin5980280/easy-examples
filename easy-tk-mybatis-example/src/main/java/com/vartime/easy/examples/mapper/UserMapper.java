@@ -12,7 +12,7 @@ import cn.org.easysite.spring.boot.tk.mybatis.core.mapper.CommonMapper;
  * @date : 2019-01-29 10:47
  * @Description :
  * @Copyright : Copyright (c) 2018
- * @Company : KeRuYun Technology(Beijing) Chengdu Co. Ltd.
+ * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vartime.easy.examples.mapper.UserMapper
  */
 @Mapper
