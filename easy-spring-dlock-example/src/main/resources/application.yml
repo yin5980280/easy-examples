@@ -1,0 +1,5 @@
+application:
+  version: 1.0
+spring:
+  redis:
+    host: 127.0.0.1

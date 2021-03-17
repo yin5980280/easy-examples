@@ -1,13 +1,12 @@
 package com.vartime.easy.examples.entity;
 
-import cn.org.easysite.spring.boot.tk.mybatis.core.entity.BaseLogicEntity;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import cn.org.easysite.spring.boot.tk.mybatis.core.entity.BaseLogicEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

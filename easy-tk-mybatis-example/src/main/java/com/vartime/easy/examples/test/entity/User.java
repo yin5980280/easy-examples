@@ -1,12 +1,10 @@
 package com.vartime.easy.examples.test.entity;
 
-import java.util.Date;
-import cn.org.easysite.spring.boot.tk.mybatis.core.entity.BaseLogicEntity;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import cn.org.easysite.spring.boot.tk.mybatis.core.entity.BaseLogicEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,12 +22,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User extends BaseLogicEntity {
-    /** 
+    /**
      * 用户年龄
      **/
     @Column(name = "user_age")
     private Long userAge;
-    /** 
+    /**
      * 用户名
      **/
     @Column(name = "user_name")

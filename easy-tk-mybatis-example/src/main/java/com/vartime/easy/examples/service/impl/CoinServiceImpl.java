@@ -1,6 +1,5 @@
 package com.vartime.easy.examples.service.impl;
 
-import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 import com.vartime.easy.examples.entity.Coin;
 import com.vartime.easy.examples.service.CoinService;
 
@@ -13,6 +12,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.InetAddress;
+
+import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 
 /**
  * @author : yinlin

@@ -1,12 +1,13 @@
 package com.vartime.easy.examples.service.impl;
 
-import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 import com.vartime.easy.examples.entity.User;
 import com.vartime.easy.examples.mapper.UserMapper;
 import com.vartime.easy.examples.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
 
 /**
  * @author : yinlin
