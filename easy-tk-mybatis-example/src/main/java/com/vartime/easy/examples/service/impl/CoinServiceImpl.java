@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.net.InetAddress;
 
-import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
+import cn.org.easysite.spring.boot.tk.mybatis.core.repository.impl.AbstractBaseLogicRepositoryImpl;
 
 /**
  * @author : yinlin
@@ -25,7 +25,7 @@ import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogi
  * @link : com.vartime.easy.examples.service.impl.UserServiceImpl
  */
 @Service
-public class CoinServiceImpl extends AbstractBaseLogicServiceImpl<Coin> implements CoinService {
+public class CoinServiceImpl extends AbstractBaseLogicRepositoryImpl<Coin> implements CoinService {
 
     @Override
     @Async

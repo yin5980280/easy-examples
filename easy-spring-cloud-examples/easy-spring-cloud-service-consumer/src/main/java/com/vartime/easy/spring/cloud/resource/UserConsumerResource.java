@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.org.easysite.spring.boot.model.BaseQuery;
+import cn.org.easysite.spring.boot.model.BasePageQuery;
 import cn.org.easysite.spring.boot.model.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 
@@ -40,7 +40,7 @@ public class UserConsumerResource {
     }
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
-    public PageInfo<UserVO> users(BaseQuery query) {
+    public PageInfo<UserVO> users(BasePageQuery query) {
         return userResourceClient.list(query);
     }
 }

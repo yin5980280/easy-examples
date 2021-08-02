@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Random;
 
 import cn.org.easysite.commons.base.bean.BeanConverter;
-import cn.org.easysite.spring.boot.model.BaseQuery;
+import cn.org.easysite.spring.boot.model.BasePageQuery;
 import cn.org.easysite.spring.boot.model.PageInfo;
+import cn.org.easysite.spring.boot.tk.mybatis.core.model.BasePageQueryModel;
+import cn.org.easysite.spring.boot.tk.mybatis.core.model.PageInfoModel;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -47,10 +49,11 @@ public class UserResource implements UserResourceInterface {
     }
 
     @Override
-    public PageInfo<UserVO> list(BaseQuery baseQuery) {
-        baseQuery.pageStart();
+    public PageInfo<UserVO> list(BasePageQuery baseQuery) {
+        BasePageQueryModel basePageQueryModel = baseQuery.convert(BasePageQueryModel.class);
+        basePageQueryModel.pageStart();
         Page<User> users = (Page<User>) userService.selectAll();
-        PageInfo<UserVO> info = PageInfo.valueOf(users);
+        PageInfo<UserVO> info = PageInfoModel.valueOf(users).convert(PageInfo.class);
         info.setList(BeanConverter.convert(UserVO.class, users));
         return info;
     }

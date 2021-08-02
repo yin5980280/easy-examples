@@ -7,7 +7,7 @@ import com.vartime.easy.examples.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogicServiceImpl;
+import cn.org.easysite.spring.boot.tk.mybatis.core.repository.impl.AbstractBaseLogicRepositoryImpl;
 
 /**
  * @author : yinlin
@@ -19,7 +19,7 @@ import cn.org.easysite.spring.boot.tk.mybatis.core.service.impl.AbstractBaseLogi
  * @link : com.vartime.easy.examples.service.impl.UserServiceImpl
  */
 @Service
-public class UserServiceImpl extends AbstractBaseLogicServiceImpl<User> implements UserService {
+public class UserServiceImpl extends AbstractBaseLogicRepositoryImpl<User> implements UserService {
     @Autowired
     private UserMapper userMapper;
 }

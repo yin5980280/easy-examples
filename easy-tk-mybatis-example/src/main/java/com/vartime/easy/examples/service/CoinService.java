@@ -2,7 +2,7 @@ package com.vartime.easy.examples.service;
 
 import com.vartime.easy.examples.entity.Coin;
 
-import cn.org.easysite.spring.boot.tk.mybatis.core.service.BaseLogicService;
+import cn.org.easysite.spring.boot.tk.mybatis.core.repository.BaseRepository;
 
 /**
  * @author : yinlin
@@ -13,6 +13,6 @@ import cn.org.easysite.spring.boot.tk.mybatis.core.service.BaseLogicService;
  * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vartime.easy.examples.service.UserService
  */
-public interface CoinService extends BaseLogicService<Coin> {
+public interface CoinService extends BaseRepository<Coin> {
     void processor();
 }

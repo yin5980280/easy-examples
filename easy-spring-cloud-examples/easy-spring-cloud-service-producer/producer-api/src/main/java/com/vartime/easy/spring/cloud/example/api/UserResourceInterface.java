@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import cn.org.easysite.spring.boot.model.BaseQuery;
+import cn.org.easysite.spring.boot.model.BasePageQuery;
 import cn.org.easysite.spring.boot.model.PageInfo;
 
 /**
@@ -30,5 +30,5 @@ public interface UserResourceInterface {
     @RequestMapping(value = "users",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    PageInfo<UserVO> list(@RequestBody BaseQuery query);
+    PageInfo<UserVO> list(@RequestBody BasePageQuery query);
 }

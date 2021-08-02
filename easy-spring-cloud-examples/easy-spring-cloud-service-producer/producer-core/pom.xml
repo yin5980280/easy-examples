@@ -23,7 +23,7 @@
         </dependency>
         <dependency>
             <groupId>cn.org.easysite</groupId>
-            <artifactId>easy-tk-mybatis-spring-boot-starter</artifactId>
+            <artifactId>easy-spring-boot-starter-tk-mybatis</artifactId>
         </dependency>
     </dependencies>
 

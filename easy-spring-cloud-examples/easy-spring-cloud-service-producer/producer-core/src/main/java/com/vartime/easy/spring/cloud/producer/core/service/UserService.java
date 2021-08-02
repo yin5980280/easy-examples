@@ -2,7 +2,7 @@ package com.vartime.easy.spring.cloud.producer.core.service;
 
 import com.vartime.easy.spring.cloud.producer.core.entity.User;
 
-import cn.org.easysite.spring.boot.tk.mybatis.core.service.BaseLogicService;
+import cn.org.easysite.spring.boot.tk.mybatis.core.repository.BaseRepository;
 
 /**
  * @author : yinlin
@@ -13,5 +13,5 @@ import cn.org.easysite.spring.boot.tk.mybatis.core.service.BaseLogicService;
  * @Company : 熊猫科技 Technology(Beijing) Chengdu Co. Ltd.
  * @link : com.vartime.easy.examples.service.UserService
  */
-public interface UserService extends BaseLogicService<User> {
+public interface UserService extends BaseRepository<User> {
 }
